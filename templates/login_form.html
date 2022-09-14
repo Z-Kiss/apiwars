@@ -1,0 +1,26 @@
+{% extends "layout.html" %}
+
+{% block title %}Snake | Login{% endblock %}
+
+{% block content %}
+<div class="login-wrapper">
+    <h2>Login</h2>
+
+    <form action="/login" method="post">
+        <div class="login-container">
+            <label>Username</label>
+            <label>
+                <input type="text" placeholder="Enter Username" name="username" required>
+            </label>
+            <label>Password</label>
+            <label>
+                <input type="password" placeholder="Enter Password" name="psw" required>
+            </label>
+            <button class="btn btn-danger" type="submit">Login</button>
+            <label>
+                <input type="checkbox" checked="checked" name="remember"> Remember me
+            </label>
+        </div>
+    </form>
+</div>
+{% endblock %}

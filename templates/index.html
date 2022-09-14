@@ -1,0 +1,46 @@
+{% extends 'layout.html' %}
+{% block content %}
+    {#<input type="hidden" id="session_user" data-user={{ session.username }}></input>#}
+<div id="title">
+    <h1>Star Wars Planet</h1>
+    <div>
+    <button style="background-color: aquamarine" class="button" id="back">previous</button>
+    <button style="background-color: #84ddf1" class="button" id="next">next</button>
+    </div>
+</div>
+<div class="modal_container">
+    <div id="modal">
+        <button id="close_modal">X</button>
+        <table>
+            <thead>
+                <th>Name</th>
+                <th>Height</th>
+                <th>Mass</th>
+                <th>Hair Color</th>
+                <th>Skin Color</th>
+                <th>Eye Color</th>
+                <th>Birth Year</th>
+                <th>Gender</th>
+            </thead>
+            <tbody id="residents"></tbody>
+        </table>
+    </div>
+</div>
+<div class = 'content_wrapper'>
+    <table>
+    <thead>
+        <th>Name</th>
+        <th>Diameter</th>
+        <th>Climate</th>
+        <th>Terrain</th>
+        <th>Surface Water Percentage</th>
+        <th>Population</th>
+        <th>Resident</th>
+    </thead>
+    <tbody id="planets"></tbody>
+</table>
+
+</div>
+
+
+{% endblock %}

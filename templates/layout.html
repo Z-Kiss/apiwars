@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="/static/js/api.js" defer></script>
+    <link rel="stylesheet" href="/static/css/style.css">
+</head>
+<body>
+{% with messages = get_flashed_messages() %}
+        {% if messages %}
+        {% for msg in messages %}
+        <p>{{msg}}</p>
+        {% endfor %}
+        {% endif %}
+        {% endwith %}
+<div>
+    {%  if session.username %}
+    <div>
+        {{ session.username }}
+        <a href="/logout"><button>Log out</button></a>
+    </div>
+
+    {% else %}
+    <div>
+    <a href="/register"><button>Register</button></a>
+    <a href="/login"><button>Login</button></a>
+    </div>
+    {% endif %}
+
+</div>
+{% block content %} {% endblock %}
+</body>
+</html>

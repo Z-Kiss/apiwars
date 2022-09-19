@@ -6,7 +6,7 @@ import queries
 from dotenv import load_dotenv
 
 load_dotenv()
-app = Flask('app')
+app = Flask('server')
 app.secret_key = b'xxxx'
 
 @app.route('/')
